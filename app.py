@@ -1,12 +1,12 @@
 import streamlit as st
 import os
-from dotenv import load_dotenv
+# from dotenv import load_dotenv
 import streamlit_google_oauth as oauth
 
-load_dotenv()
-client_id = os.environ["GOOGLE_CLIENT_ID"]
-client_secret = os.environ["GOOGLE_CLIENT_SECRET"]
-redirect_uri = os.environ["GOOGLE_REDIRECT_URI"]
+# load_dotenv()
+client_id = "657069732284-mbcb1l7ra4pask18n2cc7a29123ldsm3.apps.googleusercontent.com"
+client_secret = "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"
+redirect_uri = "http://localhost:8501"
 
 
 if __name__ == "__main__":
@@ -28,5 +28,6 @@ if __name__ == "__main__":
     if login_info:
         user_id, user_email = login_info
         st.write(f"Welcome {user_email}")
+        # st.write(login_info)
 
-# streamlit run app.py --server.port 8080
+# streamlit run app.py --server.port 8501
